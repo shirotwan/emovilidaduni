@@ -1,0 +1,18 @@
+databases:
+  - name: elecmov
+    databaseName: elecmov
+    user: elecmov
+
+services:
+  - type: web
+    name: elecmov
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: postgres://elecmov:5es4tjnWmcSzKZdVXpNXk2UsvNF9TtSL@dpg-cjk6gjdk5scs73ahku7g-a/elecmov
+        fromDatabase:
+          name: mysite
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
