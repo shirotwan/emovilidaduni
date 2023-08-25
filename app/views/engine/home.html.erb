@@ -1,0 +1,47 @@
+<div class="navbar">
+  <a class="active" href="/inicio" title="Inicio"> Inicio</a> 
+  <a href="/nosotros" title="Nosotros"> Nosotros</a> 
+  <a href="/noticias" title="Noticias"> Noticias</a> 
+  <a href="/contactos" title="Mision"> Contactos</a>
+  <a href="/metas" title="Vision"> Metas</a>
+</div>
+
+<div class="wrapper">
+	<svg>
+  <g>
+		<text x="50%" y="50%" dy=".35em" text-anchor="middle" id = "titulo">
+			Electromovilidad UNI
+		</text>
+  </g>
+	</svg>
+</div>
+
+<div class = "t2"><img
+  src="https://h2.pe/wp-content/themes/h2peru/uploads/hidrogeno-verde-beneficios-header.jpg"
+  class = "pic1"
+  style = "float:left"
+  title= "Energías verdes" /><p>Somos el capitulo estudiantil de <span class = "res" id="IEEE">IEEE Vehicular Technology Society <b>VTS</b></span> de la <span class = "res" id ="UNI">Universidad Nacional de Ingenieria <b>UNI</b></span> y nos encantaria tener la oportunidad de contar con su experiencia y conocimientos en nuestro capitulo.</p>
+<p>En nuestro capitulo, nos enfocamos en promover <span class = "res" id="IEEE">la investigacion y el desarrollo de tecnologias emergentes en el ambito de la movilidad electrica y sostenible.</span></p> Nuestro equipo esta compuesto por apasionados estudiantes de ingenieria que trabajan arduamente para contribuir al avance de la electromovilidad en nuestra universidad y comunidad.
+Hemos estado llevando a cabo diversas actividades y proyectos que buscan impulsar la adopcion de vehiculos electricos, el desarrollo de infraestructuras de carga y la optimizacion de sistemas de propulsion electrica. Ademas, organizamos charlas, talleres y conferencias para fomentar la conciencia y el interes en la electromovilidad entre nuestros estudiantes y la comunidad en general.</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('html').animate({scrollTop:0}, 1);
+    $('body').animate({scrollTop:0}, 1);
+    $(this).scrollTop(0);
+});
+$(window).on('beforeunload', function() {
+   $(window).scrollTop(0);
+});
+</script>
+<section class = "fin">
+<div id = "F1">
+<strong>
+Electromovilidad UNI
+</strong>
+<div>
+<a target="_blank" href = "https://www.facebook.com/IEEEVTSUNI/"><%= image_tag "redeslogo/facebooklogo.png",title: "Facebook", style: 'height:8vh;margin:4vh;display:inline-block;float: none;'%></a>
+<a target="_blank" href = "https://www.instagram.com/ieeevtsuni/"><%= image_tag "redeslogo/instagramlogo.png",title: "Instagram", style: 'height:8vh;margin:4vh;display:inline-block;float: none;'%></a>
+<a target="_blank" href = "https://www.linkedin.com/company/ieee-vts-uni/"><%= image_tag "redeslogo/linkedinlogo.png",title: "LinkedIn", style: 'height:8vh;margin:4vh;display:inline-block;float: none;'%></a>
+</section>

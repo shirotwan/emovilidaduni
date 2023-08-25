@@ -1,0 +1,181 @@
+/* Setups de fuentes */
+/* Titulo */
+@font-face {
+    font-family: OrgTit;
+    src: url("Organetto/Fontspring-DEMO-organetto-bold.otf") format("opentype");
+}
+/* Subtitulo */
+@font-face {
+    font-family: OrgSubTit;
+    src: url("Rotunda/Fontspring-DEMO-7a-rotunda-extrabold.otf") format("opentype");
+}
+/* Texto general */
+@font-face {
+    font-family: OrgText;
+    src: url("Organetto/Fontspring-DEMO-organetto-cndregular.otf") format("opentype");
+}
+@font-face {
+    font-family: Asap;
+    src: url("Organetto/Fontspring-DEMO-organetto-exphair.otf") format("opentype");
+}
+/* Funciones de apoyo */
+:root{
+    --tit: 'OrgTit',sans-serif;
+    --stit: 'OrgSubTit',sans-serif;
+    --txt: 'OrgText',sans-serif;
+    --sp: 'Asap',sans-serif;
+}
+@keyframes aparecer {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@keyframes desaparecer {
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+/* A T E N C I Ó N */
+/* Cuerpo operativo de página */
+::-moz-selection { /* Code for Firefox */
+    color: black;
+    background: #ffc94a;
+  }
+  
+  ::selection {
+    color: black;
+    background: #ffc94a;
+  }
+/* Cinta toolbar */
+.navbar {
+    width: 100%;
+    overflow: auto;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    animation: aparecer 7s;
+    background-color: black;
+  }
+  
+  .navbar a {
+    float: left;
+    padding: 1vh 4vw;
+    text-decoration: none;
+    font: 2.5vw var(--txt);
+    color:white;
+  }
+  
+  .navbar a:hover {
+    color: aqua;
+  }
+  
+  .active {
+    background-color: #F3830E;
+  }
+  .active:hover{
+    background-color: #ffc94a;
+  }
+  @media screen and (max-width: 450px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
+/* Cabeza wrapper */
+.wrapper{
+    margin-top: 32vh;
+    margin-bottom: 42vh;
+}
+svg {
+	width: 100%; height: 100%;
+}
+svg #titulo {
+    font: 7vw var(--tit);
+	animation: stroke 5s;
+	stroke-width: 2;
+    fill: black;
+	stroke: whitesmoke;
+    position:relative;
+    z-index: 9;
+}
+@keyframes stroke {
+	0%   {
+		fill: whitesmoke; stroke: #F3830E;
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: whitesmoke; stroke: #F3830E; }
+	80%  {fill: whitesmoke; stroke: #F3830E; stroke-width: 3; }
+	100% {
+		fill: whitesmoke; stroke: #F3830E;
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+/* Cuerpo general */
+body {
+    background-color: whitesmoke;
+    animation: anims 20s;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+    width: 0.69vw;               /* width of the entire scrollbar */
+  }
+body::-webkit-scrollbar-thumb {
+    background-color: black;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }
+@keyframes anims {
+    from{overflow: hidden;}
+    to{overflow: auto;}
+}
+/* Clases y secciones de texto */
+
+/* Inicio del primer texto*/
+
+.t2{
+    font: 2.6vh var(--txt);
+    color:rgb(0, 0, 0);
+    text-align: left;
+    overflow: hidden;
+    position: absolute;
+    padding: 5vh 3vw;
+}
+/* Primer párrafo, atributos */
+.res{
+    color:black;
+}
+#IEEE{
+    color:blue;
+}
+#UNI{
+    color:#960018;
+}
+/* Imagen 1 */
+.t2 .pic1{
+    margin: 5vh 5vw;
+    width: 35vw;
+    position: relative;
+    animation: moverse 3s infinite alternate-reverse;
+}
+@keyframes moverse {
+    from{transform: rotate3d(1, 1, 1, 10deg);}
+    to{transform: rotate3d(1, 1, 1, -10deg);}
+}
+
+/* Pie de página */
+.fin{
+    margin-top: 160vh;
+    height: 35vh;
+    bottom: 0;
+    width: 100%;
+    background: #F3830E;
+    color: black;
+    text-shadow: 3px 1px 2px white;
+    border-radius: 2.5em;
+}
+#F1{
+    color: black;
+    text-align: justify;
+    font: 3vw var(--sp);
+    margin: 50px;
+    padding-top: 50px;
+}

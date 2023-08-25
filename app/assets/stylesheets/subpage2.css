@@ -1,0 +1,102 @@
+/* Setups de fuentes */
+/* Titulo */
+@font-face {
+  font-family: OrgTit;
+  src: url("Organetto/Fontspring-DEMO-organetto-bold.otf") format("opentype");
+}
+/* Subtitulo */
+@font-face {
+  font-family: OrgSubTit;
+  src: url("Rotunda/Fontspring-DEMO-7a-rotunda-extrabold.otf") format("opentype");
+}
+/* Texto general */
+@font-face {
+  font-family: OrgText;
+  src: url("Organetto/Fontspring-DEMO-organetto-cndregular.otf") format("opentype");
+}
+@font-face {
+  font-family: Asap;
+  src: url("Organetto/Fontspring-DEMO-organetto-exphair.otf") format("opentype");
+}
+/* Funciones de apoyo */
+:root{
+  --tit: 'OrgTit',sans-serif;
+  --stit: 'OrgSubTit',sans-serif;
+  --txt: 'OrgText',sans-serif;
+  --sp: 'Asap',sans-serif;
+}
+@keyframes aparecer {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+@keyframes desaparecer {
+  from{opacity: 1;}
+  to{opacity: 0;}
+}
+
+/* A T E N C I Ó N */
+/* Cuerpo operativo de página */
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: #ffc94a;
+}
+
+::selection {
+  color: black;
+  background: #ffc94a;
+}
+/* Cinta toolbar */
+.navbar {
+  width: 100%;
+  overflow: auto;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: black;
+}
+
+.navbar a {
+  float: left;
+  padding: 1vh 4vw;
+  text-decoration: none;
+  font: 2.5vw var(--txt);
+  color:white;
+}
+
+.navbar a:hover {
+  color: aqua;
+}
+
+.active {
+  background-color: #F3830E;
+}
+.active:hover{
+  background-color: #ffc94a;
+}
+@media screen and (max-width: 450px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+/* SCROLL */
+body::-webkit-scrollbar {
+  width: 0.69vw;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: black;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+.main_articles{
+  display: block;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* A T E N C I O N */
+/* CUERPO GENERAL */
+.main_title{
+  margin: 2vh 2vw;
+  font: 3vw var(--txt);
+  color: #F3830E;
+}
