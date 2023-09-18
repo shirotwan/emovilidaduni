@@ -14,5 +14,5 @@ services:
         fromDatabase:
           name: mysite
           property: connectionString
-      - key: RAILS_MASTER_KEY
+      - key: 3f88938295818de3dfdaa0cb4bcdec8c
         sync: false
